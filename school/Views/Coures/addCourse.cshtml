@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "Add";
+}
+<div class="">
+    <div class="">
+
+        <section class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title text-center text-decoration-underline">Add New Course</h3>
+            </div>
+            <div class="panel-body">
+            @using (Html.BeginForm("addCourse", "Coures", FormMethod.Post , new { enctype = "multipart/form-data" }))
+            {
+                <form class="form-horizontal" role="form">
+
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Availbity</label>
+                        <div class="col-sm-9">
+                            <label class="radio-inline">
+                                <input type="radio" name="active" id="inlineRadio1" value="active"> Available
+                            </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="active" id="inlineRadio2" value="not"> Unavailable
+                            </label>
+                        </div>
+                    </div> <!-- form-group // -->
+
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Name Course</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="nameCo" id="name" placeholder="Name Of Course">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label for="name" class="col-sm-3 control-label">Number Houres </label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="nbrH" id="name" placeholder="Number Of Houres ..">
+                        </div>
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label for="about" class="col-sm-3 control-label">Spsialiste</label>
+                        <div class="col-sm-9">
+                            <input type="text" placeholder="Spesialiste" name="spesialisteCo" class="form-control" />
+                        </div>
+
+                    </div> <!-- form-group // -->
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label">Image</label>
+                        <div class="col-sm-9">
+                            <input type="file" name="image" class="form-control" />
+                        </div>
+
+                    </div> <!-- form-group // -->
+
+                    <hr>
+                    <div class="form-group">
+                        <div class="col-sm-offset-3 col-sm-9">
+                            <button type="submit" class="btn btn-primary">Add Course</button>
+                        </div>
+                    </div> <!-- form-group // -->
+                </form>
+
+            }
+            </div><!-- panel-body // -->
+        </section><!-- panel// -->
+
+
+    </div> <!-- container// -->
+</div>

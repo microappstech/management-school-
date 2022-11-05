@@ -1,0 +1,40 @@
+﻿@Styles.Render("~/productdesign")
+@model school.Models.Course 
+@{
+    ViewBag.Title = "Detail";
+}
+
+<section>
+    <header>
+        <h1>@Model.nameCo.ToUpper()</h1>
+        <h3> Course Published <br>By Admin</h3>
+    </header>
+    <div data-product-detail>
+        <div class="img-card">
+            <div class='img'>
+                <i class="far fa-heart"></i>
+                <img src="~/Content/images/@Model.image" />
+            </div>
+            
+        </div>
+        <div class="product-details">
+            <h2>
+                @Model.nameCo
+            </h2 >
+                        <p>This Course Is Published By Admin</p>
+                        <p><i class="fas fa-star"></i>4.5 | <span>2.5k reviews</span></p>
+                        <p>Times</p>
+                        <p><span>@Model.nbrH</span> Houres</p>
+                        <p>Available in 5 colors</p>
+                        <div class="saple-colors d-flex">
+                            <div class="btn btn-success">Pdf</div>
+                            <div class="btn btn-info mx-2">Vedio</div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <button>Buy Now</button>
+                        <button>Contact</button>
+</div>
+    </div>
+</section>
+
